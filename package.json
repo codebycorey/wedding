@@ -1,0 +1,14 @@
+{
+  "name": "CoreyAndDevin",
+  "version": "0.0.1",
+  "description": "Corey and Devin's Wedding",
+  "repository": "",
+  "main": "index.html",
+  "author": "Corey O'Donnell",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch" : "v0.6.1",
+    "grunt-contrib-cssmin" : "v0.12.3",
+    "grunt-contrib-sass": "^0.8.1"
+  }
+}
