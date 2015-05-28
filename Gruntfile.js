@@ -4,7 +4,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'css/materialize.css' : 'css/materialize.scss'
-        }
+        },
         options: {
           style: 'compressed'
         }
@@ -13,14 +13,14 @@ module.exports = function(grunt) {
     cssmin: {
       compress: {
         files: {
-          '' : ''
+          'css/style.min.css' : 'css/style.css'
         }
       }
     },
     watch: {
       css: {
         files: ['css/**/*.css'],
-        tasks: ['sass'],
+        tasks: ['cssmin'],
       },
     },
   });
@@ -28,5 +28,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.registerTask('default', ['sass', 'watch']);
+  grunt.registerTask('default', ['cssmin', 'watch']);
 };
